@@ -15,17 +15,17 @@
     "name": {
       "type": "string"
     },
-    "catergory": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::catergory.catergory",
-      "inversedBy": "subcategories"
-    },
     "post_blogs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::post-blog.post-blog",
       "mappedBy": "subcategory"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "subcategories"
     }
   }
 }

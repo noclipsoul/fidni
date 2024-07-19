@@ -788,13 +788,12 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiCatergoryCatergory extends Schema.CollectionType {
-  collectionName: 'catergories';
+export interface ApiCategoryCategory extends Schema.CollectionType {
+  collectionName: 'categories';
   info: {
-    singularName: 'catergory';
-    pluralName: 'catergories';
+    singularName: 'category';
+    pluralName: 'categories';
     displayName: 'category';
-    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -802,7 +801,7 @@ export interface ApiCatergoryCatergory extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     subcategories: Attribute.Relation<
-      'api::catergory.catergory',
+      'api::category.category',
       'oneToMany',
       'api::subcategory.subcategory'
     >;
@@ -810,13 +809,13 @@ export interface ApiCatergoryCatergory extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::catergory.catergory',
+      'api::category.category',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::catergory.catergory',
+      'api::category.category',
       'oneToOne',
       'admin::user'
     > &
@@ -917,15 +916,15 @@ export interface ApiSubcategorySubcategory extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String;
-    catergory: Attribute.Relation<
-      'api::subcategory.subcategory',
-      'manyToOne',
-      'api::catergory.catergory'
-    >;
     post_blogs: Attribute.Relation<
       'api::subcategory.subcategory',
       'oneToMany',
       'api::post-blog.post-blog'
+    >;
+    category: Attribute.Relation<
+      'api::subcategory.subcategory',
+      'manyToOne',
+      'api::category.category'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -963,7 +962,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::catergory.catergory': ApiCatergoryCatergory;
+      'api::category.category': ApiCategoryCategory;
       'api::media-upload.media-upload': ApiMediaUploadMediaUpload;
       'api::post-blog.post-blog': ApiPostBlogPostBlog;
       'api::subcategory.subcategory': ApiSubcategorySubcategory;

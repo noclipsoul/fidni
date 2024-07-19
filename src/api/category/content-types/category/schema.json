@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "catergories",
+  "collectionName": "categories",
   "info": {
-    "singularName": "catergory",
-    "pluralName": "catergories",
-    "displayName": "category",
-    "description": ""
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "category"
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +18,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::subcategory.subcategory",
-      "mappedBy": "catergory"
+      "mappedBy": "category"
     }
   }
 }
