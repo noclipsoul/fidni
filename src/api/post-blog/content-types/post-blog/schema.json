@@ -40,6 +40,19 @@
       "relation": "oneToMany",
       "target": "api::media-upload.media-upload",
       "mappedBy": "post_blog"
+    },
+    "Mediafile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "videourl": {
+      "type": "text"
     }
   }
 }

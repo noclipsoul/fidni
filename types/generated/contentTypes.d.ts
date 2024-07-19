@@ -793,7 +793,7 @@ export interface ApiCatergoryCatergory extends Schema.CollectionType {
   info: {
     singularName: 'catergory';
     pluralName: 'catergories';
-    displayName: 'catergory';
+    displayName: 'category';
     description: '';
   };
   options: {
@@ -884,6 +884,8 @@ export interface ApiPostBlogPostBlog extends Schema.CollectionType {
       'oneToMany',
       'api::media-upload.media-upload'
     >;
+    Mediafile: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    videourl: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
