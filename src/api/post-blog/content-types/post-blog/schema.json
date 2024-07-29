@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_blogs",
+  "info": {
+    "singularName": "post-blog",
+    "pluralName": "post-blogs",
+    "displayName": "PostBlog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    },
+    "thumnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "SeoInformation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "subcategory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subcategory.subcategory",
+      "inversedBy": "post_blogs"
+    },
+    "Mediafiles": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
