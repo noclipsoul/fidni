@@ -17,13 +17,13 @@ connection:{
     debug: false,
     
     pool:{
-        min:0,
-        max:10,
-        acquireTimeoutMillis:600000,
-        createTimeoutMillis:30000,
-        idleTimeoutMillis:20000,
-        reapIntervalMillis:20000,
-        createRetryIntervalMillis:200
+        min: 0,
+        max: 10,
+        acquireTimeoutMillis: 600000,
+        createTimeoutMillis: 30000,
+        idleTimeoutMillis: 20000,
+        reapIntervalMillis: 20000,
+        createRetryIntervalMillis: 200
     },
 
    
