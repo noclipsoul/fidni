@@ -1,7 +1,5 @@
-version: "3"
 services:
   fidni:
- 
     build: .
     image: noclipsoul/fidni
     restart: unless-stopped
@@ -9,7 +7,7 @@ services:
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_HOST: fidniDB
-      DATABASE_PORT: 
+      DATABASE_PORT: 5432 # Add a valid port number if missing
       DATABASE_NAME: fidniDB
       DATABASE_USERNAME: fidni
       DATABASE_PASSWORD: fidni@ibsar123
@@ -18,15 +16,15 @@ services:
       APP_KEYS: 5P8FzTkv1IrIKtKhOEuYLA==,wGTjH7fdonR4TP9Fwaqs/w==,PW/Lg1TkgyvzA0Y1BXPP>
       NODE_ENV: production
 
-      deploy:
-        replicas: 3
-        placement:
-          max_replicas_per_node: 1
-        update_config:
-          parallelism: 2
-          delay: 50s
-        restart_policy:
-          condition: on-failure
+    deploy:
+      replicas: 3
+      placement:
+        max_replicas_per_node: 1
+      update_config:
+        parallelism: 2
+        delay: 50s
+      restart_policy:
+        condition: on-failure
 
     volumes:
       - ./config:/opt/app/config
@@ -37,28 +35,5 @@ services:
       - ./public/uploads:/opt/app/public/uploads
     ports:
       - "1337:1337"
-   
     depends_on:
       - fidniDB
-
-  fidniDB:
-   
-   # platform: linux/amd64 #for platform error on Apple M1 chips
-    restart: unless-stopped
-    env_file: .env
-    image: postgres:12.0-alpine
-    environment:
-      POSTGRES_USER: fidniDB
-      POSTGRES_PASSWORD: fidni@ibsar123
-      POSTGRES_DB: fidni
-    volumes:
-      - strapi-data:/var/lib/postgresql/data/ #using a volume
-      #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
-
-    ports:
-      - "5432:5432"
-    
-
-volumes:
-  strapi-data:
-
