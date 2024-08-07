@@ -7,13 +7,11 @@ services:
     env_file: .env
     environment:
       DATABASE_CLIENT: postgres
-      DATABASE_HOST: 127.0.0.1
-      DATABASE_PORT: 5432
+      DATABASE_HOST: fidni-DB
+      DATABASE_PORT: 
       DATABASE_NAME: fidni
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: fidni@ibsar123
-      DATABASE_SCHEMA: ${DATABASE_SCHEMA}
-      DATABASE_SSL: ${DATABASE_SSL}
       JWT_SECRET: a2Wy1zVNcl2x2tSYc9Txfg==
       ADMIN_JWT_SECRET: 7rgi3J1Xyl3vIP6sjl9pww==
       APP_KEYS: =m3YaXhQAOg/T4f13GYKyvQ==,cGEu12nWbpVGDQXm53hFZQ==,wHuzHOnLb6RzOZuPJZJdMA==,XeKGnnfoHePC1lx3ahJa6A==
@@ -43,15 +41,16 @@ services:
 
   fidniDB:
     restart: unless-stopped
+    env_file: .env
     image: postgres:12.0-alpine
     environment:
-      POSTGRES_USER: ${DATABASE_USERNAME}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: postges
+      POSTGRES_PASSWORD: fidni@ibsar123
+      POSTGRES_DB: fidni
     volumes:
       - strapi-data:/var/lib/postgresql/data/
     ports:
-      - "5432:5432"
+      - "5439:5432"
 
 volumes:
   strapi-data:
