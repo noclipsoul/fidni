@@ -7,7 +7,7 @@ services:
     env_file: .env
     environment:
       DATABASE_CLIENT: postgres
-      DATABASE_HOST: fidni-api_fidniDB # Matches the service name for PostgreSQL
+      DATABASE_HOST: 10.0.0.43 # Matches the service name for PostgreSQL
       DATABASE_PORT: 5433 # Default port for PostgreSQL
       DATABASE_NAME: fidnidb
       DATABASE_USERNAME: postgres
