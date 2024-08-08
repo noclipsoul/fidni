@@ -8,7 +8,7 @@ services:
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_HOST: fidni-api_fidniDB # Matches the service name for PostgreSQL
-      DATABASE_PORT: 5432 # Default port for PostgreSQL
+      DATABASE_PORT: 5433 # Default port for PostgreSQL
       DATABASE_NAME: fidnidb
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: fidni@ibsar123
@@ -45,7 +45,7 @@ services:
     volumes:
       - strapi-data:/var/lib/postgresql/data/
     ports:
-      - "5432:5432" # PostgreSQL service port
+      - "5433:5432" # PostgreSQL service port
 
 volumes:
   strapi-data:
