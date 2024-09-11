@@ -30,7 +30,7 @@ USER node
 RUN npm run build
 
 # Expose port
-EXPOSE 1337
+EXPOSE 1338
 
 # Command to run the application
 CMD ["npm", "run", "develop"]
