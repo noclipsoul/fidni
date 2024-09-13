@@ -7,8 +7,8 @@ services:
     env_file: .env
     environment:
       DATABASE_CLIENT: postgres
-      DATABASE_HOST: 10.0.0.43 # Matches the service name for PostgreSQL
-      DATABASE_PORT: 5433 # Default port for PostgreSQL
+      DATABASE_HOST: localhost # Matches the service name for PostgreSQL
+      DATABASE_PORT:  # Default port for PostgreSQL
       DATABASE_NAME: fidnidb
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: fidni@ibsar123
@@ -31,7 +31,7 @@ services:
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
-      - "1337:1337"
+      - "1338:1338"
     depends_on:
       - fidniDB
 
@@ -45,7 +45,7 @@ services:
     volumes:
       - strapi-data:/var/lib/postgresql/data/
     ports:
-      - "5433:5432" # PostgreSQL service port
+      - "5432:5432" # PostgreSQL service port
 
 volumes:
   strapi-data:
