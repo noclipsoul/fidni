@@ -1,29 +1,29 @@
 version: '3'
 services:
-  postgres:
-    image: postgres:12
-    environment:
-      POSTGRES_DB: fidnidb
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: fidni@ibsar123
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
   strapi:
-    build: .
+    build:
+      context: .  # Ensure this points to the directory containing the Dockerfile
     environment:
       DATABASE_CLIENT: postgres
-      DATABASE_HOST: localhost
+      DATABASE_HOST: 51.195.222.168
       DATABASE_PORT: 5432
       DATABASE_NAME: fidnidb
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: fidni@ibsar123
+      JWT_SECRET: I/+rkXaLbhgWkLBOpKJGbQ==
+      ADMIN_JWT_SECRET: xxgcoJ6iMcpbILzSIz7ghw==
+      APP_KEYS: 5P8FzTkv1IrIKtKhOEuYLA==,wGTjH7fdonR4TP9Fwaqs/w==,PW/Lg1TkgyvzA0Y1BXPP>
+      NODE_ENV: production
     ports:
       - "1338:1338"
-    depends_on:
-      - postgres
+    networks:
+      - fidni_default
 
 volumes:
   pgdata:
+
+networks:
+  fidni_default:
+    external: true
+    attachable: true
+
