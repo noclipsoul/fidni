@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Vidéo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title_french": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description_french": {
+      "type": "blocks",
+      "required": true
+    },
+    "Title_arabic": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description_arabic": {
+      "type": "blocks",
+      "required": true
+    },
+    "URL_of_the_video": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "communication_inclusives",
+  "info": {
+    "singularName": "communication-inclusive",
+    "pluralName": "communication-inclusives",
+    "displayName": "Communication inclusive",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title_french": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Description_french": {
+      "type": "blocks",
+      "required": true
+    },
+    "Content_french": {
+      "type": "richtext",
+      "required": true
+    },
+    "Title_arabic": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description_arabic": {
+      "type": "blocks",
+      "required": true
+    },
+    "Content_arabic": {
+      "type": "richtext",
+      "required": true
+    },
+    "Choose": {
+      "type": "enumeration",
+      "enum": [
+        "charte",
+        "recommendation"
+      ],
+      "required": true
+    }
+  }
+}

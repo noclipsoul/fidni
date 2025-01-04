@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents_de_plaidoyers",
+  "info": {
+    "singularName": "documents-de-plaidoyer",
+    "pluralName": "documents-de-plaidoyers",
+    "displayName": "Documents de plaidoyer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title_french": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Description_french": {
+      "type": "blocks",
+      "required": true
+    },
+    "Preview_image_and_file": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

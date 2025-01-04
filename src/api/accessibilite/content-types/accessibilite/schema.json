@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibilites",
+  "info": {
+    "singularName": "accessibilite",
+    "pluralName": "accessibilites",
+    "displayName": "Accessibilité"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title_french": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Description_french": {
+      "type": "text",
+      "required": true
+    },
+    "Content_french": {
+      "type": "blocks",
+      "required": true
+    },
+    "Title_arabic": {
+      "type": "string"
+    },
+    "Description_arabic": {
+      "type": "text",
+      "required": true
+    },
+    "Content_arabic": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

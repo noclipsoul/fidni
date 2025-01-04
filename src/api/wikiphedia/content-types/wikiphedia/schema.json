@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wikiphedias",
+  "info": {
+    "singularName": "wikiphedia",
+    "pluralName": "wikiphedias",
+    "displayName": "Wikiphedia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Choose": {
+      "type": "enumeration",
+      "enum": [
+        "Les acteurs sociaux et politiques",
+        "Les artistes",
+        "Les chercheurs",
+        "Les entrepreneurs",
+        "Les sportifs"
+      ],
+      "required": true
+    },
+    "Title_french": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Description_french": {
+      "type": "blocks",
+      "required": true
+    },
+    "Content_french": {
+      "type": "blocks",
+      "required": true
+    },
+    "Title_arabic": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Description_arabic": {
+      "type": "blocks",
+      "required": true
+    },
+    "Content_arabic": {
+      "type": "blocks"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

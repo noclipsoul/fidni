@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audio_and_podcasts",
+  "info": {
+    "singularName": "audio-and-podcast",
+    "pluralName": "audio-and-podcasts",
+    "displayName": "Audio&Podcast"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Choose": {
+      "type": "enumeration",
+      "enum": [
+        "Audio",
+        "Podcast"
+      ],
+      "required": true
+    },
+    "Title_french": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Content_french": {
+      "type": "blocks",
+      "required": true
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Audio_File": {
+      "allowedTypes": [
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

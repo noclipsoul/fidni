@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "opportunites",
+  "info": {
+    "singularName": "opportunite",
+    "pluralName": "opportunites",
+    "displayName": "Opportunités"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title_french": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Organization_french": {
+      "type": "string",
+      "required": true
+    },
+    "Description_of_the_organization_french": {
+      "type": "text",
+      "required": true
+    },
+    "Mediafiles": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "Title_arabic": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Organization_arabic": {
+      "type": "string",
+      "required": true
+    },
+    "Description_of_the_organization_arabic": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
