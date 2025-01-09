@@ -4,7 +4,8 @@
   "info": {
     "singularName": "actualite",
     "pluralName": "actualites",
-    "displayName": "Actualités"
+    "displayName": "Actualités",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,26 +21,24 @@
       "type": "string",
       "required": true
     },
-    "Content_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Content_arabic": {
-      "type": "blocks",
-      "required": true
-    },
     "Image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Content_french": {
+      "type": "text"
+    },
+    "Content_arabic": {
+      "type": "text"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "evenement",
     "pluralName": "evenements",
-    "displayName": "Événements"
+    "displayName": "Événements",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,10 +25,6 @@
       "type": "string",
       "required": true
     },
-    "Content_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string",
       "required": true,
@@ -37,16 +34,20 @@
       "type": "string",
       "required": true
     },
-    "Content_arabic": {
-      "type": "blocks",
-      "required": true
-    },
     "Image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Content_french": {
+      "type": "text",
+      "required": true
+    },
+    "Content_arabic": {
+      "type": "text",
       "required": true
     }
   }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "droit",
     "pluralName": "droits",
-    "displayName": "Droits"
+    "displayName": "Droits",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,10 +21,6 @@
       "type": "text",
       "required": true
     },
-    "Content_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string",
       "required": true,
@@ -33,8 +30,11 @@
       "type": "text",
       "required": true
     },
+    "Content_french": {
+      "type": "text"
+    },
     "Content_arabic": {
-      "type": "blocks",
+      "type": "text",
       "required": true
     }
   }

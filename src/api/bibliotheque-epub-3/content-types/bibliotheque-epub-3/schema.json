@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bibliotheque-epub-3",
     "pluralName": "bibliotheque-epub-3s",
-    "displayName": "Bibliothèque EPUB3"
+    "displayName": "Bibliothèque EPUB3",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,26 +17,26 @@
       "required": true,
       "unique": true
     },
-    "Description_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string",
       "unique": true,
       "required": true
     },
-    "Description_arabic": {
-      "type": "blocks",
-      "required": true
-    },
     "Preview_image_and_file": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": true,
+      ]
+    },
+    "Description_arabic": {
+      "type": "text",
+      "required": true
+    },
+    "Description_french": {
+      "type": "text",
       "required": true
     }
   }

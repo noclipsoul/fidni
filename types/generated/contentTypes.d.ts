@@ -365,6 +365,7 @@ export interface AdminUser extends Schema.CollectionType {
 export interface ApiAccessibiliteAccessibilite extends Schema.CollectionType {
   collectionName: 'accessibilites';
   info: {
+    description: '';
     displayName: 'Accessibilit\u00E9';
     pluralName: 'accessibilites';
     singularName: 'accessibilite';
@@ -373,8 +374,8 @@ export interface ApiAccessibiliteAccessibilite extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Content_arabic: Attribute.Blocks & Attribute.Required;
-    Content_french: Attribute.Blocks & Attribute.Required;
+    Content_arabic: Attribute.Text & Attribute.Required;
+    Content_french: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::accessibilite.accessibilite',
@@ -400,6 +401,7 @@ export interface ApiAccessibiliteAccessibilite extends Schema.CollectionType {
 export interface ApiActualiteActualite extends Schema.CollectionType {
   collectionName: 'actualites';
   info: {
+    description: '';
     displayName: 'Actualit\u00E9s';
     pluralName: 'actualites';
     singularName: 'actualite';
@@ -408,8 +410,8 @@ export interface ApiActualiteActualite extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Content_arabic: Attribute.Blocks & Attribute.Required;
-    Content_french: Attribute.Blocks & Attribute.Required;
+    Content_arabic: Attribute.Text;
+    Content_french: Attribute.Text;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::actualite.actualite',
@@ -436,6 +438,7 @@ export interface ApiAudioAndPodcastAudioAndPodcast
   extends Schema.CollectionType {
   collectionName: 'audio_and_podcasts';
   info: {
+    description: '';
     displayName: 'Audio&Podcast';
     pluralName: 'audio-and-podcasts';
     singularName: 'audio-and-podcast';
@@ -446,7 +449,7 @@ export interface ApiAudioAndPodcastAudioAndPodcast
   attributes: {
     Audio_File: Attribute.Media<'audios'> & Attribute.Required;
     Choose: Attribute.Enumeration<['Audio', 'Podcast']> & Attribute.Required;
-    Content_french: Attribute.Blocks & Attribute.Required;
+    Content_french: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::audio-and-podcast.audio-and-podcast',
@@ -471,6 +474,7 @@ export interface ApiBibliothequeEpub3BibliothequeEpub3
   extends Schema.CollectionType {
   collectionName: 'bibliotheque_epub_3s';
   info: {
+    description: '';
     displayName: 'Biblioth\u00E8que EPUB3';
     pluralName: 'bibliotheque-epub-3s';
     singularName: 'bibliotheque-epub-3';
@@ -486,8 +490,8 @@ export interface ApiBibliothequeEpub3BibliothequeEpub3
       'admin::user'
     > &
       Attribute.Private;
-    Description_arabic: Attribute.Blocks & Attribute.Required;
-    Description_french: Attribute.Blocks & Attribute.Required;
+    Description_arabic: Attribute.Text & Attribute.Required;
+    Description_french: Attribute.Text & Attribute.Required;
     Preview_image_and_file: Attribute.Media<'images' | 'files', true> &
       Attribute.Required;
     publishedAt: Attribute.DateTime;
@@ -519,7 +523,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     approved: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
-    content: Attribute.Blocks & Attribute.Required;
+    content: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
       Attribute.Private;
@@ -588,8 +592,6 @@ export interface ApiCommunicationInclusiveCommunicationInclusive
   attributes: {
     Choose: Attribute.Enumeration<['charte', 'recommendation']> &
       Attribute.Required;
-    Content_arabic: Attribute.RichText & Attribute.Required;
-    Content_french: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::communication-inclusive.communication-inclusive',
@@ -597,8 +599,8 @@ export interface ApiCommunicationInclusiveCommunicationInclusive
       'admin::user'
     > &
       Attribute.Private;
-    Description_arabic: Attribute.Blocks & Attribute.Required;
-    Description_french: Attribute.Blocks & Attribute.Required;
+    Description_arabic: Attribute.Text & Attribute.Required;
+    Description_french: Attribute.Text & Attribute.Required;
     publishedAt: Attribute.DateTime;
     Title_arabic: Attribute.String & Attribute.Required & Attribute.Unique;
     Title_french: Attribute.String & Attribute.Required & Attribute.Unique;
@@ -616,6 +618,7 @@ export interface ApiDocumentsDePlaidoyerDocumentsDePlaidoyer
   extends Schema.CollectionType {
   collectionName: 'documents_de_plaidoyers';
   info: {
+    description: '';
     displayName: 'Documents de plaidoyer';
     pluralName: 'documents-de-plaidoyers';
     singularName: 'documents-de-plaidoyer';
@@ -631,7 +634,7 @@ export interface ApiDocumentsDePlaidoyerDocumentsDePlaidoyer
       'admin::user'
     > &
       Attribute.Private;
-    Description_french: Attribute.Blocks & Attribute.Required;
+    Description_french: Attribute.Text;
     Preview_image_and_file: Attribute.Media<'images' | 'files', true> &
       Attribute.Required;
     publishedAt: Attribute.DateTime;
@@ -649,6 +652,7 @@ export interface ApiDocumentsDePlaidoyerDocumentsDePlaidoyer
 export interface ApiDroitDroit extends Schema.CollectionType {
   collectionName: 'droits';
   info: {
+    description: '';
     displayName: 'Droits';
     pluralName: 'droits';
     singularName: 'droit';
@@ -657,8 +661,8 @@ export interface ApiDroitDroit extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Content_arabic: Attribute.Blocks & Attribute.Required;
-    Content_french: Attribute.Blocks & Attribute.Required;
+    Content_arabic: Attribute.Text & Attribute.Required;
+    Content_french: Attribute.Text;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::droit.droit',
@@ -684,6 +688,7 @@ export interface ApiDroitDroit extends Schema.CollectionType {
 export interface ApiEvenementEvenement extends Schema.CollectionType {
   collectionName: 'evenements';
   info: {
+    description: '';
     displayName: '\u00C9v\u00E9nements';
     pluralName: 'evenements';
     singularName: 'evenement';
@@ -692,8 +697,8 @@ export interface ApiEvenementEvenement extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Content_arabic: Attribute.Blocks & Attribute.Required;
-    Content_french: Attribute.Blocks & Attribute.Required;
+    Content_arabic: Attribute.Text & Attribute.Required;
+    Content_french: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::evenement.evenement',
@@ -830,6 +835,7 @@ export interface ApiSubcategorieSubcategorie extends Schema.CollectionType {
 export interface ApiVideoVideo extends Schema.CollectionType {
   collectionName: 'videos';
   info: {
+    description: '';
     displayName: 'Vid\u00E9o';
     pluralName: 'videos';
     singularName: 'video';
@@ -845,8 +851,8 @@ export interface ApiVideoVideo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    Description_arabic: Attribute.Blocks & Attribute.Required;
-    Description_french: Attribute.Blocks & Attribute.Required;
+    Description_arabic: Attribute.Text & Attribute.Required;
+    Description_french: Attribute.Text & Attribute.Required;
     publishedAt: Attribute.DateTime;
     Title_arabic: Attribute.String & Attribute.Required & Attribute.Unique;
     Title_french: Attribute.String & Attribute.Required & Attribute.Unique;
@@ -883,8 +889,8 @@ export interface ApiWikiphediaWikiphedia extends Schema.CollectionType {
       ]
     > &
       Attribute.Required;
-    Content_arabic: Attribute.Blocks;
-    Content_french: Attribute.Blocks & Attribute.Required;
+    Content_arabic: Attribute.Text;
+    Content_french: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::wikiphedia.wikiphedia',
@@ -892,8 +898,8 @@ export interface ApiWikiphediaWikiphedia extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    Description_arabic: Attribute.Blocks & Attribute.Required;
-    Description_french: Attribute.Blocks & Attribute.Required;
+    Description_arabic: Attribute.Text & Attribute.Required;
+    Description_french: Attribute.Text & Attribute.Required;
     Image: Attribute.Media<'images'> & Attribute.Required;
     publishedAt: Attribute.DateTime;
     Title_arabic: Attribute.String & Attribute.Required & Attribute.Unique;

@@ -17,26 +17,10 @@
       "unique": true,
       "required": true
     },
-    "Description_french": {
-      "type": "blocks",
-      "required": true
-    },
-    "Content_french": {
-      "type": "richtext",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "Description_arabic": {
-      "type": "blocks",
-      "required": true
-    },
-    "Content_arabic": {
-      "type": "richtext",
-      "required": true
     },
     "Choose": {
       "type": "enumeration",
@@ -44,6 +28,14 @@
         "charte",
         "recommendation"
       ],
+      "required": true
+    },
+    "Description_french": {
+      "type": "text",
+      "required": true
+    },
+    "Description_arabic": {
+      "type": "text",
       "required": true
     }
   }

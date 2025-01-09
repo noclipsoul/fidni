@@ -4,7 +4,8 @@
   "info": {
     "singularName": "audio-and-podcast",
     "pluralName": "audio-and-podcasts",
-    "displayName": "Audio&Podcast"
+    "displayName": "Audio&Podcast",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,24 +25,24 @@
       "required": true,
       "unique": true
     },
-    "Content_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "Audio_File": {
-      "allowedTypes": [
-        "audios"
-      ],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "Content_french": {
+      "type": "text",
       "required": true
     }
   }

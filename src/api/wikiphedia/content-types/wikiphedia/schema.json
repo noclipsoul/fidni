@@ -28,25 +28,10 @@
       "unique": true,
       "required": true
     },
-    "Description_french": {
-      "type": "blocks",
-      "required": true
-    },
-    "Content_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string",
       "unique": true,
       "required": true
-    },
-    "Description_arabic": {
-      "type": "blocks",
-      "required": true
-    },
-    "Content_arabic": {
-      "type": "blocks"
     },
     "Image": {
       "type": "media",
@@ -55,6 +40,21 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "Description_french": {
+      "type": "text",
+      "required": true
+    },
+    "Content_french": {
+      "type": "text",
+      "required": true
+    },
+    "Description_arabic": {
+      "type": "text",
+      "required": true
+    },
+    "Content_arabic": {
+      "type": "text"
     }
   }
 }

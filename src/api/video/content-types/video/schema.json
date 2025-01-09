@@ -4,7 +4,8 @@
   "info": {
     "singularName": "video",
     "pluralName": "videos",
-    "displayName": "Vidéo"
+    "displayName": "Vidéo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,20 +17,20 @@
       "required": true,
       "unique": true
     },
-    "Description_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Description_arabic": {
-      "type": "blocks",
+    "URL_of_the_video": {
+      "type": "text",
       "required": true
     },
-    "URL_of_the_video": {
+    "Description_french": {
+      "type": "text",
+      "required": true
+    },
+    "Description_arabic": {
       "type": "text",
       "required": true
     }

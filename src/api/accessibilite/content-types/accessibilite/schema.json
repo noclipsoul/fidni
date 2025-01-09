@@ -4,7 +4,8 @@
   "info": {
     "singularName": "accessibilite",
     "pluralName": "accessibilites",
-    "displayName": "Accessibilité"
+    "displayName": "Accessibilité",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,10 +21,6 @@
       "type": "text",
       "required": true
     },
-    "Content_french": {
-      "type": "blocks",
-      "required": true
-    },
     "Title_arabic": {
       "type": "string"
     },
@@ -31,8 +28,12 @@
       "type": "text",
       "required": true
     },
+    "Content_french": {
+      "type": "text",
+      "required": true
+    },
     "Content_arabic": {
-      "type": "blocks",
+      "type": "text",
       "required": true
     }
   }
